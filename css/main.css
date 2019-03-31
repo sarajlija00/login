@@ -1,5 +1,13 @@
 .center {
     margin: 0 auto;
     width: 200px;
-    
+}
+.image {
+    height: 220px;
+    width: 220px;
+    margin-left: 430px;
+    margin-top:  50px;
+}
+.login {
+    width: 173px;
 }

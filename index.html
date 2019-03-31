@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <img src="./images/login.png">
+        <img src="./images/login.png" class="image">
         <form id="correct" name="obj" class="center">
             <input id="email" type="email" placeholder="Email">
             <br>
@@ -18,8 +18,12 @@
             </div><input id="password" type="password" placeholder="Password">
             <br>
             <br>
-            <input type="button" value="Login" onclick="login()">
+            <input type="button" value="Login" onclick="login()" class="login">
         </form>
-        <div id="error"></div>
+        <div id="error" class="center"></div>
+        <div id="result" style="display:none"></div>
+        <div id="snd" style="display:none" class="center">
+            <button class="login" onclick="send ()">Send</button>
+        </div>
     </body>
 </html>
