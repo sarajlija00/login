@@ -15,7 +15,6 @@ function login (){
         }
         if (xhttp.readyState == 4 && xhttp.status != 200) {
             document.getElementById ('error').innerHTML = 'Incorrect mail or password';
-            document.getElementById ('error').value = "";
         }
  
     }
@@ -30,5 +29,14 @@ function send (){
     xhttp.open ("GET", 'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/user/profile', true);
     xhttp.setRequestHeader ('Authorization', token.token);
     xhttp.send ();
-
+    xhttp.onreadystatechange = function (){
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log(xhttp.responseText);
+            document.getElementById ('rezultat').innerHTML = xhttp.responseText;
+            let responseObject = JSON.parse (xhttp.responseText);
+            document.getElementById ('response').innerHTML = responseObject.responseText;
+            
+        }
+    }
 }
+
