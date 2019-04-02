@@ -11,10 +11,12 @@ function login (){
             document.getElementById ('correct').innerHTML = xhttp.responseText;
             let  responseObject = JSON.parse (xhttp.responseText);
             document.getElementById ('result').innerHTML = responseObject.token;
+            document.getElementById ('error').style = 'display:none';
             token = JSON.parse (xhttp.responseText);
         }
         if (xhttp.readyState == 4 && xhttp.status != 200) {
             document.getElementById ('error').innerHTML = 'Incorrect mail or password';
+            
         }
  
     }
@@ -25,14 +27,13 @@ function login (){
 let token;
 
 function send (){
-xhttp = new XMLHttpRequest ();
+    let xhttp = new XMLHttpRequest ();
     xhttp.open ("GET", 'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/user/profile', true);
     xhttp.setRequestHeader ('Authorization', token.token);
     xhttp.send ();
     xhttp.onreadystatechange = function (){
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             console.log(xhttp.responseText);
-            // document.getElementById ('rezultat').innerHTML = xhttp.responseText;
             let responseObject = JSON.parse (xhttp.responseText);
             document.getElementById ('response').innerHTML = `
                 ID: ${responseObject.id} <br>
@@ -43,5 +44,19 @@ xhttp = new XMLHttpRequest ();
             
         }
     }
+}
+
+function glr(){
+    let xhttp = new XMLHttpRequest ();
+    xhttp.onreadystatechange = function (){
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            let responseObject = JSON.parse (xhttp.responseText);
+            document.getElementById ('rsl').innerHTML = responseObject.token;
+            token = JSON.parse (xhttp.responseText);            
+        }
+    }
+    xhttp.open ("GET",'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/images/list', true);
+    xhttp.setRequestHeader ('Authorization', token.token);
+    xhttp.send();
 }
 

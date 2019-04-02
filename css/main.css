@@ -1,13 +1,15 @@
+.body {
+    background-image: url("../images/body.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .center {
-    margin: 0 auto;
-    width: 200px;
+   margin-left: 45%;
+   margin-top: 250px;
 }
-.image {
-    height: 220px;
-    width: 220px;
-    margin-left: 507px;
-    margin-top:  50px;
+.snd {
+    width: 44.7%;
 }
-.login {
-    width: 173px;
+.top {
+    margin-top: 10px;
 }

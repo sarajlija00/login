@@ -9,23 +9,24 @@
         <script src="./javascript/script.js"></script>
     </head>
 
-    <body>
-        <img src="./images/login.png" class="image">
-        <form id="correct" name="obj" class="center">
+    <body class="body">
+        <form id="correct" name="obj" class="center"> 
             <input id="email" type="email" placeholder="Email">
             <br>
             <br>
             </div><input id="password" type="password" placeholder="Password">
             <br>
             <br>
-            <input type="button" value="Login" onclick="login()" class="login">
+            <input type="button" value="Login" onclick="login()" class="snd">
         </form>
         <div id="error" class="center"></div>
         <div id="result" style="display:none"></div>
-        <div id="snd" style="display:none" class="center">
-            <button class="login" onclick="send ()">Send</button>
+        <div id="snd" style="display:none">
+            <button class="snd center" onclick="send ()">Send</button>
+            <br>
+            <button class="snd center top" onclick="glr ()">Galery</button>
         </div>
-        <div id="rezultat"></div>
-        <div id="response" class="center"></div>
+        <div id="response" class="snd center top"></div>
+        <div id="rsl"></div>
     </body>
 </html>
