@@ -16,9 +16,7 @@ function login (){
         }
         if (xhttp.readyState == 4 && xhttp.status != 200) {
             document.getElementById ('error').innerHTML = 'Incorrect mail or password';
-            
         }
- 
     }
     xhttp.open ("POST", 'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/user/login', true);
     xhttp.setRequestHeader ("Content-Type", "application/json;charset=UTF-8");
@@ -57,11 +55,10 @@ function glr(){
             for (i = 0; i < data.length; i++){
                 let photoLink = url + '/' + data[i].Key; 
                 console.log(photoLink);
-                document.getElementById('result').innerHTML += `<img src ="${photoLink}"`;
+                document.getElementById('gall').innerHTML += `<img src ="${photoLink}">`;
                 }
             }
         }
-    
     xhttp.open ("GET",'https://3d1pftib26.execute-api.eu-west-1.amazonaws.com/dev/images/list', true);
     xhttp.setRequestHeader ('Authorization', token.token);
     xhttp.send();
