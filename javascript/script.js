@@ -52,7 +52,9 @@ function glr(){
             let data = responseObject.Contents;
             for (i = 0; i < data.length; i++){
                 let photoLink = url + '/' + data[i].Key; 
-                document.getElementById('gall').innerHTML += `<img src ="${photoLink}" width="300px" height="300px" class="col-sm-4">`;
+                document.getElementById('gall').innerHTML += `<img src ="${photoLink}"
+                width="300px" height="300px" 
+                class="col-sm-4">`;
                 }
             }
         }
