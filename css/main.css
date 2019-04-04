@@ -3,13 +3,23 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
+input {
+    width: 250px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
 .center {
-   margin-left: 45%;
-   margin-top: 250px;
+  margin-left: 40%;
+  margin-top:  10%;
 }
-.snd {
-    width: 25%;
+
+.text {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
 }
-.top {
-    margin-top: 10px;
+.img {
+    width: 100px;
+    height: 100px;
 }

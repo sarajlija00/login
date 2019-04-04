@@ -31,7 +31,6 @@ function send (){
     xhttp.send ();
     xhttp.onreadystatechange = function (){
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log(xhttp.responseText);
             let responseObject = JSON.parse (xhttp.responseText);
             document.getElementById ('response').innerHTML = `
                 ID: ${responseObject.id} <br>
@@ -49,13 +48,11 @@ function glr(){
     xhttp.onreadystatechange = function (){
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             let responseObject = JSON.parse (xhttp.responseText);
-            console.log(responseObject);  
             let url = responseObject.base_url;
             let data = responseObject.Contents;
             for (i = 0; i < data.length; i++){
                 let photoLink = url + '/' + data[i].Key; 
-                console.log(photoLink);
-                document.getElementById('gall').innerHTML += `<img src ="${photoLink}">`;
+                document.getElementById('gall').innerHTML += `<img src ="${photoLink}" width="300px" height="300px" class="col-sm-4">`;
                 }
             }
         }
