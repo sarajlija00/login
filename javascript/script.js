@@ -54,7 +54,7 @@ function glr(){
                 let photoLink = url + '/' + data[i].Key; 
                 document.getElementById('gall').innerHTML += `<img src ="${photoLink}"
                 width="300px" height="300px" 
-                class="col-sm-4">`;
+                class="container-fluid col-4 col-sm-3 col-sd-3 col-sd3">`;
                 }
             }
         }
